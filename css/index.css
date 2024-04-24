@@ -1,0 +1,78 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.5vw;
+    padding-top: 3vh;
+    height: 10vw;
+}
+
+.board {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+}
+
+.square {
+    width: 8vw;
+    height: 8vw;
+    border: 1px solid black;
+    font-size: 7vw;
+    text-align: center;
+}
+
+.square:nth-child(5) {
+    border: none;
+}
+
+.square:nth-child(2),
+.square:nth-child(8) {
+    border-left: none;
+    border-right: none;
+}
+
+.square:nth-child(4),
+.square:nth-child(6) {
+    border-top: none;
+    border-bottom: none;
+}
+
+.turn-text {
+    text-align: center;
+    font-size: max(15px,1.25vw);
+    padding: 0;
+    height: 60px;
+    margin-top: 2vh;
+}
+
+.winner {
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 50px;
+}
+
+.winner #win-text {
+    transform: scale(0);
+}
+
+.winner #restart-button {
+    display: inline-block;
+    margin: 3vh auto;
+    width: 200px;
+    height: 50px;
+    font-size: 50%;
+}
+

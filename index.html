@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js" defer></script>
+</head>
+<body>
+<div class="title">
+    <h1>Tic Tac Toe</h1>
+</div>
+<div class="board" id="board">
+    <div class="square" onclick="onClick()"></div>
+    <div class="square" onclick="onClick()"></div>
+    <div class="square" onclick="onClick()"></div>
+
+    <div class="square" onclick="onClick()"></div>
+    <div class="square" onclick="onClick()"></div>
+    <div class="square" onclick="onClick()"></div>
+
+    <div class="square" onclick="onClick()"></div>
+    <div class="square" onclick="onClick()"></div>
+    <div class="square" onclick="onClick()"></div>
+</div>
+
+<div class="turn-text" id="turn-text">Player 1's turn (X)</div>
+<div class="winner" id="winner">
+    <div id="win-text">Player 1 wins</div>
+    <button type="button" id="restart-button" onclick="clearBoard()">Restart</button>
+</div>
+<footer>
+</footer>
+</body>
+</html>
