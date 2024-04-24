@@ -4,6 +4,9 @@ var playAllowed = true;
 const winner = document.getElementById('winner')
 const board = document.getElementById('board')
 const turnText = document.getElementById('turn-text')
+const body = document.querySelector('body')
+const toggleModeButton = document.getElementById('toggle-mode-button')
+const square = document.getElementById('squ')
 
 function clearBoard() {
     for (let i = 0; i < board.children.length; i++) {
@@ -110,3 +113,18 @@ function checkWinD() {
         }
 }
 
+function toggleMode() {
+    if (body.classList.contains('dark-mode')) {
+        body.classList.remove('dark-mode');
+        board.classList.remove('dark-mode');
+        for (let i = 0; i < board.children.length; i++) {
+            board.children[i].classList.remove('dark-mode');
+        }
+    } else {
+        body.classList.add('dark-mode');
+        board.classList.add('dark-mode');
+        for (let i = 0; i < board.children.length; i++) {
+            board.children[i].classList.add('dark-mode');
+        }
+    }
+}
