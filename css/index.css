@@ -6,6 +6,7 @@
 body {
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     margin: 0;
     background-color: #ffffff;
 }
@@ -29,28 +30,31 @@ body.dark-mode {
 .title {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    font-size: 1.5vw;
-    padding-top: 2vh;
-    height: 10vw;
+    font-size: max(20px, 1.5vw);
     margin: auto;
+    /*background-color: red;*/
+    flex-grow: 0;
 }
 
 .board {
     display: grid;
     justify-content: center;
-    align-content: center;
-    justify-items: center;
     align-items: center;
+    justify-items: center;
+    align-content: center;
     grid-template-columns: repeat(3, auto);
     border-color: #ffffff;
+    /*background-color: green;*/
+    flex-grow: 1;
 }
 
 .square {
-    width: 8vw;
-    height: 8vw;
+    width: max(120px,8vw);
+    height: max(120px,8vw);
+    font-size: max(100px,7vw);
     border: 1px solid black;
-    font-size: 7vw;
     text-align: center;
 }
 
@@ -80,6 +84,7 @@ body.dark-mode {
     padding: 0;
     height: 60px;
     margin-top: 2vh;
+    /*background-color: blue;*/
 }
 
 .winner {
@@ -95,8 +100,24 @@ body.dark-mode {
 
 .winner #restart-button {
     display: inline-block;
-    margin: 3vh auto;
+    margin: 2vh auto;
     width: 200px;
     height: 50px;
     font-size: 50%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+    padding: 0 1vw;
+}
+
+footer a {
+    text-decoration: none;
+    color: blue;
+}
+
+footer a:active, footer a:hover, footer a:visited {
+    color: blue;
 }
