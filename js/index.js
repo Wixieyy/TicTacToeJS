@@ -6,7 +6,8 @@ const board = document.getElementById('board')
 const turnText = document.getElementById('turn-text')
 const body = document.querySelector('body')
 const toggleModeButton = document.getElementById('toggle-mode-button')
-const square = document.getElementById('squ')
+const restartButton = document.getElementById('restart-button')
+const square = document.getElementById('square')
 
 function clearBoard() {
     for (let i = 0; i < board.children.length; i++) {
@@ -117,12 +118,22 @@ function toggleMode() {
     if (body.classList.contains('dark-mode')) {
         body.classList.remove('dark-mode');
         board.classList.remove('dark-mode');
+        restartButton.style.backgroundColor = '';
+        restartButton.style.color = '';
+        toggleModeButton.style.backgroundColor = '';
+        toggleModeButton.style.color = '';
+
         for (let i = 0; i < board.children.length; i++) {
             board.children[i].classList.remove('dark-mode');
         }
     } else {
         body.classList.add('dark-mode');
         board.classList.add('dark-mode');
+        restartButton.style.backgroundColor = '#282828';
+        restartButton.style.color = '#f8f8ff';
+        toggleModeButton.style.backgroundColor = '#282828';
+        toggleModeButton.style.color = '#f8f8ff';
+
         for (let i = 0; i < board.children.length; i++) {
             board.children[i].classList.add('dark-mode');
         }
